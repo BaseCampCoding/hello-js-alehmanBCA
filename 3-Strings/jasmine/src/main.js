@@ -1,13 +1,11 @@
-    // Task 1
-
 let line = "Stands so high";
-let line2 = "Huge hooves too";
-let line3 = "Impatiently waits for";
+let frontDoorLetter = line[0];
 
-// Takes the first letter of the string in the 'line' variable.
-let frontDoorLetter = line[0] + line2[0].toLowerCase() + line3[0].toLowerCase();
-console.log(frontDoorLetter)
+let frontDoorWord = "SHIRE";
+let frontDoorPassword = frontDoorWord[0].toUpperCase() + frontDoorWord.slice(1,5).toLowerCase();
 
-let frontDoorPassword;
-let backDoorLetter;
-let backDoorPassword;
+let lineWithWhiteSpace = "Reins and Harness";
+let removeWhiteSpace = lineWithWhiteSpace.trim();
+let backDoorLetter = removeWhiteSpace[removeWhiteSpace.length - 1];
+let backDoorWord = "Horse";
+let backDoorPassword = backDoorWord + ", please"
