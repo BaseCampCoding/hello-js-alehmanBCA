@@ -2,20 +2,17 @@
 //Create a variable for the body type of car that the user
 //wants to buy. Then, display that information to the user.
 let kind = "car";
+let needsLicenseResult;
+
 console.log("You plan on buying a " + kind + "!")
 
-//Create a variable that tells whether or not the user
-//has a drivers license yet.
-let needsLicenseResult = false;
-
-//If the user doesn't have a license, shame them.
-if (needsLicenseResult==true){
-    console.log("How do you not have a license..? That's kind of embarrasing.")
+if (kind == "car" || kind == 'truck'){
+    needsLicenseResult = true;
+    console.log("You need a license to drive a " + kind);
 }
-
-//Otherwise, tell the user that they are ready to go!
 else{
-    console.log("Looks like you are ready to go! Now all thats left is to find a nice ride!")
+    needsLicenseResult = false;
+    console.log("You don't need a license to drive a " + kind);
 }
 
 // Task 2
@@ -25,8 +22,15 @@ else{
 let option1 = '2020 White Nissan Altima';
 let option2 = '2010 Gray Mazda 3';
 
+let chooseVehicleResult;
+
 //Display the better choice vehicle.
-let chooseVehicleResult = '2010 Mazda 3 is clearly the better choice.'; //great choice Seanathon
+if (option1>option2){
+    chooseVehicleResult = option1 + " is clearly the better choice!";
+}
+    chooseVehicleResult = option2 + " is clearly the better choice!"; //great choice Seanathon
+
+console.log(chooseVehicleResult);
 
 // Task 3
 let originalPrice = 20000; //Original price (MSRP) of the car
@@ -36,14 +40,14 @@ let calculateResellPriceResult;
 //Use an if, else if, and else statement to determine the 
 //current price of the vehicle.
 if (age < 3){
-    calculateResellPriceResult = originalPrice * .8
+    calculateResellPriceResult = originalPrice * 0.8
 }
 else if (age > 10){
-    calculateResellPriceResult = originalPrice * .5;
+    calculateResellPriceResult = originalPrice * 0.5;
 }
 else{
     calculateResellPriceResult = originalPrice * .7;
 }
 
 //Display this price to the user.
-console.log(" Sean's super cool race car would be $" + calculateResellPriceResult); //(ChatGPT estimated them at under $7,000)
+console.log("Sean's super cool race car would be $" + calculateResellPriceResult); //(ChatGPT estimated them at under $7,000)
