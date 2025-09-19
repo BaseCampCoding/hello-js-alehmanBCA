@@ -18,7 +18,7 @@ First, you will create a new visitor in the system. Then you will provide a func
 
 ## Task 3: Determine the Ticket Status
 
-- Create an object named `tickets` that maps ticket identifiers to either `null` (for not sold) or the name of the visitor (for sold tickets).
+- Create an object named `tickets` that  maps ticket identifiers to either `null` (for not sold) or the name of the visitor (for sold tickets).
 - Create a variable named `ticketIdToCheck` for the ticket identifier you want to check.
 - Create a variable named `ticketStatusResult`.
   - If `ticketIdToCheck` is NOT a key in the `tickets` object, set `ticketStatusResult` to `'unknown ticket id'`.
