@@ -21,8 +21,11 @@ for (let key in tickets){
         //Fix the above line of code so that it doesnt say 'undefined.'
         console.log(ticketStatusResult)
     }
+    else if (tickets[key] == 'null'){
+        ticketStatusResult = 'not sold';
+    }
     else{
-        console.log("Good Bye")
+        ticketStatusResult =='unknown ticket id';
     }
 }
 // *FINISH TASK 3*\\
