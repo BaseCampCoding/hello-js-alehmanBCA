@@ -37,4 +37,3 @@ let simpleTicketStatusResult;
 // Task 5
 const visitorWithGtc = {};
 let gtcVersion;
-// *FINISH TASK 5*\\
