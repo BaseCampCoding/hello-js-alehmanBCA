@@ -1,5 +1,5 @@
 // Task 1
-let birdsPerDay = [2, 4, 3, 1, 5, 2, 8];
+let birdsPerDay = [5, 2, 6, 7, 9, 10, 20];
 let total = 0;
 
 for (let i = 0; i < birdsPerDay.length; i++){
@@ -15,11 +15,13 @@ let weekStart = (week - 1) * daysPerWeek;
 let weekEnd = week * daysPerWeek;
 let weekTotal = 0;
 
-//Figure out the for loop explained on line 28 on the readme.
+for (let i = weekStart; i < weekEnd && i < birdsPerDay.length; i++){
+    weekTotal += birdsPerDay[i];
+}
+console.log(weekTotal);
 
 // Task 3
-for (let i = 0; i < birdsPerDay.length - 1; i++){
-    i += 1;
+for (let i = 0; i < birdsPerDay.length - 1; i+=2){
     birdsPerDay[i] += 1;
 }
-console.log(birdsPerDay);
+console.log("Total of " + birdsPerDay + " birb");
