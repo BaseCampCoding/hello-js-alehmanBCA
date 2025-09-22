@@ -45,36 +45,38 @@ console.log("Wedges Cut: " + wedgesCut);
 console.log("Limes Cut: " + limesCut);
 
 // Task 3
-let timeLeft = 4; //minutes left in Li Mei's shift.
+let timeLeft = 7; //minutes left in Li Mei's shift.
 let totalTime = 0;
-let orderTrack = [];
+let orderIndex = 0;
 let index = 0;
 
-let orders = ["Energizer", "All or Nothing"];
+let orders = ["Energizer", "Tropical Islane", "All or Nothing", "Pure Strawberry Joy"];
 
-for (let i = 0; i < orders.length; i++){
-    let juice = orders[i];
-
-    if (orders[i] == "Pure Strawberry Joy"){
-        timeToMixJuiceResult = 0.5;
+while(totalTime < timeLeft && orderIndex < orderIndex.length){
+    if (orders[orderIndex] == "Pure Strawberry Joy"){
+        totalTime = 0.5;
     }
-    else if (orders[i] == "Energizer" || orders[i] == "Green Garden") {
-        timeToMixJuiceResult = 1.5;
+    else if (orders[orderIndex] == "Energizer" || orders[orderIndex] == "Green Garden") {
+        totalTime = 1.5;
     }
-    else if (orders[i] == "Tropical Island"){
-        timeToMixJuiceResult = 3;
+    else if (orders[orderIndex] == "Tropical Island"){
+        totalTime = 3;
     }
-    else if (orders[i] == "All or Nothing"){
-        timeToMixJuiceResult = 5;
+    else if (orders[orderIndex] == "All r Noothing"){
+        totalTime = 5;
     }
     else{
-        timeToMixJuiceResult = 2;
+        totalTime = 2;
     }
+
+    orderIndex += 1;
     
-    orderTrack.push(juice);
-    totalTime += timeToMixJuiceResult;
+}
+let remainingOrders = [];
+if (orderIndex < orders.length){
+    for(let t = orderIndex; t < orders.length; t++){
+        remainingOrders.push(orders[t]);
+    }
 }
 
-while (totalTime < timeLeft && index < orderTrack){
-
-}
+console.log(remainingOrders);

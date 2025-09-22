@@ -1,33 +1,37 @@
 // Task 1
-const scoreBoard = {'The Best Ever':1000000};
+const scoreBoard = {'The Best Ever':1000000, "Kobe": 7000};
 
 // Task 2
-let newPlayerName = 'Joe';
-let newPlayerScore = 6;
+let newPlayerName = "LeBron";
+let newPlayerScore = 5000;
 
 scoreBoard[newPlayerName] = newPlayerScore;
+console.log("After adding " + newPlayerName);
 console.log(scoreBoard);
 
 // Task 3
-let playerToRemove = 'Joe';
+let playerToRemove = 'The Best Ever';
 
 //Deletes the key and value where the key equals the playerToRemove variable.
 delete scoreBoard[playerToRemove];
+console.log("After Delete")
 console.log(scoreBoard);
 
 // Task 4
-scoreBoard.John = 15;
-console.log(scoreBoard)
-let playerNameToUpdate = 'John';
+console.log(typeof(scoreBoard["LeBron"]))
+let playerNameToUpdate = 'LeBron';
+let scoreToAdd = 1000;
+scoreBoard[playerNameToUpdate] += 1000;
 
-scoreToAdd = 2;
-scoreBoard.John += scoreToAdd;
-console.log(scoreBoard)
+console.log("After score update");
+console.log(scoreBoard);
 
 // Task 5'
 let mondayBonus = 100;
 
-for (let name in scoreBoard){
-    scoreBoard[name] += mondayBonus;
-    console.log(scoreBoard);
+for(let player in scoreBoard){
+    scoreBoard[player] += mondayBonus;
 }
+
+console.log("After Monday Bonus")
+console.log(scoreBoard)
