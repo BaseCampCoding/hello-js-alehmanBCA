@@ -24,8 +24,8 @@ let canSpy;
 if (knightIsAwake==true || archerIsAwake==true || prisonerIsAwake==true){
     canSpy = true;
 }
-else{
-    canSpy = true;
+else {
+    canSpy = false;
 }
 
 console.log("Can Spy: " + canSpy);
