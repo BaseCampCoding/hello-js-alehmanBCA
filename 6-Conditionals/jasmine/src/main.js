@@ -19,16 +19,18 @@ else{
 
 //Create variables that hold the type of car that the
 //user is planning on getting. (slight influence from some cool people)
-let option1 = '2020 White Nissan Altima';
-let option2 = '2010 Gray Mazda 3';
+let option1 = 'Nissan Altima';
+let option2 = 'Mazda 3';
 
 let chooseVehicleResult;
 
 //Display the better choice vehicle.
-if (option1>option2){
+if (option1<option2){
     chooseVehicleResult = option1 + " is clearly the better choice!";
 }
+else {
     chooseVehicleResult = option2 + " is clearly the better choice!"; //great choice Seanathon
+}
 
 console.log(chooseVehicleResult);
 
